@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반복문</title>         
+</head>
+<body>
+    <!--
+        팩토리얼 - 1부터 n까지 곱한 결과
+        5! -> 5 x 4 x 3 x 2 x 1 = 120
+        3! -> 3 x 2 x 1 = 6 
+    -->
+    <h1>팩토리얼 계산</h1>
+    <script>
+        var input = prompt('숫자를 입력하세요.');
+        var msg = '';
+        
+        if(input != null) {      // 취소버튼을 눌렀는지 확인
+            var nFact = 1;       // 결과값
+            var i;               // 카운터
+            
+            for(i = 1; i <= input; i++) {
+                nFact *= i;     // nFact = nFact * i
+            }
+
+            msg = input + "! = " + nFact;   // 결과값을 표시할 문자열
+        }else {
+            msg = '값을 입력하지 않았습니다.';
+        }
+        document.write(msg);    // 결과 표시
+    </script>
+</body>
+</html>
+
+
+
+
+
+

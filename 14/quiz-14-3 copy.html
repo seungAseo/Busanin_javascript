@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+	<style>
+		body {
+			font-size:1.2em;
+			text-align:center;
+		}
+		p {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h2>입력받은 수까지의 합을 구하기</h2>
+	<script>
+		var number = prompt('숫자를 입력해주세요.');
+		var i;
+		var count = 0;
+		var sum = 0;
+
+		for(i = 1; i <= number; i++) {
+			sum += i;
+			count++;
+
+			if(i == number) {
+				document.write(i + ' = ' + sum);
+			} else {
+				document.write(i + ' + ');
+			}
+		}
+		document.write('<p>1부터 ' + number + '까지의 개수 : ' + count + '</p>');
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

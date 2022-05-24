@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수의 재사용성</title>
+</head>
+<body>
+    <script>
+        /*
+        (num1, num2) - 매개변수(parameter)
+        (2, 3) - 인수(argument)
+        return - 결과값을 함수 밖의 실행한 위치로 돌려주는 것을 '값을 반환한다'라고 함
+        */
+        /*
+        function addNumber(num1, num2) {
+            var sum = num1 + num2;
+            return sum;         // 반환하는 값 지정
+        }
+        */
+        function addNumber(num1, num2) {            
+            return num1 + num2; 
+        }
+        var result = addNumber(2, 3);       // 함수 호출
+        var result2 = addNumber(10, 20);    // 함수의 재사용
+        document.write('두 수를 더한 값' + result);
+    </script>    
+</body>
+</html>
+
+
+
+

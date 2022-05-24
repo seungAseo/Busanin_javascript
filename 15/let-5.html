@@ -1,0 +1,32 @@
+<!--
+호이스팅(hoisting)
+- '끌어올린다'를 뜻함
+- 끌어올린다고 해서 실제로 소스 코드를 끌어올리는 것은 아니고 
+  소스를 그런 식으로 해석한다는 의미
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>호이스팅이 없는 let 변수</title>
+</head>
+<body>
+    <script>
+      var x = 10;
+      
+      function displayNumber() {
+        console.log('x is ' + x);
+        console.log('y is ' + y);
+        let y = 20;
+      }
+
+      displayNumber();
+    </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!--
+switch문
+- 기본형
+  switch(조건) {
+      case 값1: 명령1
+        break;
+      case 값2: 명령2
+        break;
+        ...
+      default: 명령n
+  }
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>switch문</title>
+</head>
+<body>
+    <script>
+        var session = prompt('관심 세션을 선택해주세요.' + 
+                            '1-마케팅, 2-개발, 3-디자인');
+        
+        switch(session) {
+            case "1": 
+                document.write('<p>마케팅 세션은 201호에서...</p>');
+                break;
+            case "2":
+                document.write('<p>개발 세션은 203호에서...</p>');
+                break;
+            case "3":
+                document.write('<p>디자인 세션은 205호에서...</p>');
+                break;
+            default: 
+                // 1, 2, 3이 아닌 값을 입력받으면 출력
+                alert('잘못 입력했습니다.');
+        }
+
+        // switch문 -> if문 
+        /*
+        if(session === '1') {
+            document.write('<p>마케팅 세션은 201호에서...</p>');
+        }else if(session === '2') {
+            document.write('<p>개발 세션은 203호에서...</p>');
+        }else if(session === '3') {
+            document.write('<p>디자인 세션은 205호에서...</p>');
+        }else {
+            alert('잘못 입력했습니다.');
+        }
+        */
+    </script>
+</body>
+</html>
+
+
+
+
+
+

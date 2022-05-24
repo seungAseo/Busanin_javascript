@@ -1,0 +1,35 @@
+<!--
+parentNode 프로퍼티
+- 노드 삭제는 부모 노드에 먼저 접근해서 찾아야함
+- 기본형
+  노드.parentNode
+
+removeChild() 메서드
+- 기본형
+  부모노드.removeChild(자식노드)
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>노드 리스트 삭제</title>
+</head>
+<body>
+    <h1>Web Programming</h1>
+    <ul id="itemList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    <button id="btnDel">삭제하기</button>
+
+    <script>
+        var li = document.querySelectorAll('li');        
+        document.querySelector('#btnDel').onclick = function() {
+            for(let i = 0; i < li.length; i++) {
+                li[i].parentNode.removeChild(li[i]);    
+            }
+        }
+    </script>
+</body>
+</html>

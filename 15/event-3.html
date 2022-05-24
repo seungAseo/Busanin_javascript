@@ -1,0 +1,55 @@
+<!--
+DOM을 이용한 이벤트 처리기
+- 기본형
+  웹 요소.onclick = 함수;
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM을 이용한 이벤트 처리기</title>
+</head>
+<body>
+    <button id="change">글자색 바꾸기</button>
+    <p>글자색을 바꾸는 이벤트 처리기 예제입니다.</p>
+
+    <script>
+        /*
+        // 방법 1: 웹 요소를 변수로 지정 & 미리 만든 함수 사용
+        function changeColor() {
+            document.querySelector('p').style.color = '#f00';
+        }
+
+        var changeBtn = document.querySelector('#change');
+        changeBtn.onclick = changeColor;
+        */
+
+        /*
+        // 방법 2: 웹 요소를 따로 변수로 만들지 않고 사용
+        function changeColor() {
+            document.querySelector('p').style.color = '#f00';
+        }
+
+        document.querySelector('#change').onclick = changeColor;
+        */
+
+        // 방법 3: 함수를 직접 선언
+        document.querySelector('#change').onclick = function() {
+            document.querySelector('p').style.color = '#f00';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

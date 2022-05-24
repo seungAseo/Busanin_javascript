@@ -1,0 +1,40 @@
+<!--
+addEventListener() 메서드 사용하기
+- 한 요소에 여러 이벤트 처리기를 연결해 실행할 수 있음
+- addEventListener() 메서드는 끝에 세미콜론(;)을 꼭 붙여야 함
+- 기본형 
+  요소.addEventListener(이벤트, 함수, 캡처 여부);
+  이벤트: 이벤트 유형을 지정함. on을 붙이지 않음
+  함수: 이벤트 발생 시 실행할 명령이나 함수를 지정. 
+  캡처 여부: 이벤트를 캡처하는지 여부를 지정. 기본값은 false
+            true이면 캡처링으로 DOM의 부모 노드에서 자식 노드로 전달되는것
+            false이면 버블링으로 DOM의 자식 노드에서 부모 노드로 전달되는것
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener()</title>
+</head>
+<body>
+    <img src="images/easys-1.jpg" id="cover">
+
+    <script>
+        var cover = document.getElementById('cover');
+        cover.addEventListener('mouseover', changePic);  // 마우스 포인터를 올리면 changePic() 실행
+        cover.addEventListener('mouseout', originPic);  // 마우스 포인터를 내리면 originPic() 실행
+
+        function changePic() {
+            cover.src = 'images/easys-2.jpg';   // 이미지 경로를 바꿈
+        }
+
+        function originPic() {
+            cover.src = 'images/easys-1.jpg';   // 이미지 경로를 바꿈
+        }
+    </script>
+</body>
+</html>
+
+
+
+

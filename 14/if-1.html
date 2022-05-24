@@ -1,0 +1,46 @@
+<!--
+if문과 if~else문
+if문
+- 괄호 안의 조건을 체크해서 true이면 if문 다음에 나오는 명령을 실행하고
+                          false이면 아무것도 하지 않음
+- 기본형
+  if(조건) {
+      조건 결과값이 true일 때 실행할 명령
+  }                        
+
+if~else문
+- if문에서 결과값이 true가 아닐 때 실행할 명령을 else문에 추가한 것
+- 기본형 
+  if(조건) {
+      조건 결과값이 true일 때 실행할 명령
+  } else {
+      조건 결과값이 false일 때 실행할 명령
+  }
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>조건문-if</title>
+</head>
+<body>
+    <script>
+        var userNumber = prompt("숫자를 입력하세요.");
+
+        if(userNumber % 3 === 0) {
+            alert('3의 배수입니다.');
+        } else {
+            alert('3의 배수가 아닙니다.');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

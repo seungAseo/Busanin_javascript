@@ -1,0 +1,66 @@
+<!--
+while문과 do~while문
+
+while문
+- 기본형 
+  while(조건) {
+      실행할 명령
+  }
+
+do~while문
+- 기본형
+  do{
+      실행할 명령
+  } while(조건)
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반복문</title>         
+</head>
+<body>
+    <!--
+        팩토리얼 - 1부터 n까지 곱한 결과
+        5! -> 5 x 4 x 3 x 2 x 1 = 120
+        3! -> 3 x 2 x 1 = 6 
+    -->
+    <h1>while문을 이용한 팩토리얼 계산</h1>
+    <script>
+        var input = prompt('숫자를 입력하세요.');
+        var msg = '';
+        
+        if(input != null) {      // 취소버튼을 눌렀는지 확인
+            var nFact = 1;       // 결과값
+            var i = 1;           // 카운터
+
+            // input = 3
+            while(i <= input) {
+                nFact *= i;     // nFact = nFact * i
+                i++;
+            }
+            msg = input + "! = " + nFact;   // 결과값을 표시할 문자열
+
+// 1. i = 1
+//    input = 3 -> i <= 3 체크 -> (조건 만족함) -> nFact *= i 실행 -> i++
+// 2. i = 2
+//    input = 3 -> i <= 3 체크 -> (조건 만족함) -> nFact *= i 실행 -> i++
+// 2. i = 3
+//    input = 3 -> i <= 3 체크 -> (조건 만족함) -> nFact *= i 실행 -> i++
+// 2. i = 4
+//    input = 3 -> i <= 3 체크 -> (조건 만족하지 않음) -> while문 종료
+//    -> 결과값을 msg에 저장
+//    -> 결과값 화면에 출력
+        }else {
+            msg = '값을 입력하지 않았습니다.';
+        }
+        document.write(msg);    // 결과 표시
+    </script>
+</body>
+</html>
+
+
+
+
+
+

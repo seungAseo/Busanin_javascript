@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>속성 가져오기</title>
+</head>
+<body>
+    <div id="prod-pic">
+        <img src="images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" width="200" height="200"
+            onclick="displaySrc();">
+    </div>    
+
+    <script>
+        function displaySrc() {
+            var cup = document.getElementById('cup');          // id='cup'인 요소에 접근
+            alert('이미지 소스: ' + cup.getAttribute('src'));   // cup의 src 속성값을 알림창에 표시
+        }
+    </script>
+</body>
+</html>

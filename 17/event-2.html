@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM요소에 함수 직접 연결</title>
+</head>
+<body>
+    <img src="images/cup-1.png" id="cup">
+
+    <script>
+        var cup = document.querySelector('#cup');        
+        cup.onclick = changePic;            // cup을 클릭하면 changePic() 함수를 실행
+
+        function changePic() {
+            cup.src = "images/cup-2.png";   // cup요소의 경로를 다른 이미지 경로로 바꿈
+        }
+    </script>
+</body>
+</html>

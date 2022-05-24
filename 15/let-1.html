@@ -1,0 +1,41 @@
+<!--
+es6(ECMASCRIPT6 = ECMASCRIPT 2015)
+
+let을 사용한 변수의 특징
+- es6 이전의 자바스크립트에서는 var예약어만으로 변수를 선언했음
+- var 예약어를 빠뜨리면 의도하지 않게 전역 변수가 되기도 하고 
+  프로그램 길이가 길어지다 보면 실수로 사용하는 변수를 재선언하거나 재할당해
+  버리는 경우가 생김으로 인해
+  es6에서는 변수를 선언하기 위한 예약어로 let와 const가 추가되었고
+  되도록 var예약어는 사용하지 않을 것을 권장함
+
+블록 안에서만 쓸 수 있는 변수
+let 예약어로 선언한 변수는 변수를 선언한 블록({}로 묶은 부분)에서만 유효, 블록을 벗어나면 사용할 수 없음
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>let을 사용한 변수</title>
+</head>
+<body>
+    <script>
+      function calcSum(n) {
+        let sum = 0;                      // 변수 sum의 적용 범위 시작
+        for(let i = 1; i < n + 1; i++) {  // 변수 i의 적용 범위 시작
+          sum += i;
+          // 변수 i의 적용 범위 끝
+        }
+        console.log(sum);
+        // 변수 sum의 적용 범위 끝
+      }
+      calcSum(10);
+    </script>
+</body>
+</html>
+
+
+
+
+
+

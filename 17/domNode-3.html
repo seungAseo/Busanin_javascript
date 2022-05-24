@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>속성값이 있는 새로운 요소 추가</title>
+</head>
+<body>
+    <div id="container">
+        <h1>DOM을 공부합시다</h1>
+        <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function addContents() {            
+            var newP = document.createElement('p');            
+            var txtNode = document.createTextNode('DOM은 document object model의 줄임말입니다.');            
+            newP.appendChild(txtNode);
+            
+            //1. 요소 노드 만들기 - createElement() 메서드
+            var newImg = document.createElement('img');
+            //2. 속성 노드 만들기 - createAttribute() 메서드
+            var srcNode = document.createAttribute('src');
+            var altNode = document.createAttribute('alt');
+            srcNode.value = 'images/dom.jpg';       // src 속성값 지정
+            altNode.value = '돔 트리 예제 이미지';   // alt 속성값 지정
+            //3. 속성 노드 연결하기 - setAttributeNode() 메서드
+            newImg.setAttributeNode(srcNode);
+            newImg.setAttributeNode(altNode);
+
+            document.getElementById('info').appendChild(newP);
+            //4. 자식 노드 연결하기 - appendChild() 메서드
+            document.getElementById('info').appendChild(newImg);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

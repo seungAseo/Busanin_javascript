@@ -1,0 +1,46 @@
+<!--
+웹 요소를 수정하는 innerText, innerHTML 프로퍼티
+- innerText: 텍스트 내용을 표시
+- innerHTML: HTML 태그까지 반영하여 표시
+- 기본형 
+  요소명.innerText = 내용
+  요소명.innerHTML = 내용
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 요소 수정</title>
+</head>
+<body>
+    <button onclick="innText();">innerText로 표시하기</button>
+    <button onclick="innHTML();">innerHTML로 표시하기</button>
+    <h1>현재 시각: </h1>
+    <div id="current"></div>
+
+    <script>
+        var now = new Date();
+
+        function innText() {
+            document.getElementById('current').innerText = now;
+        }
+
+        function innHTML() {
+            document.getElementById('current').innerHTML = "<em>" + now + "</em>";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

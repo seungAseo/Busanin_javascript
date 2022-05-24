@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>속성 수정하기</title>
+    <style>
+        #container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        #prod-pic {
+            float: left;
+            margin: 20px 20px auto 10px;
+            padding: 0;
+        }
+        #small-pic {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .small {
+            width: 60px;
+            height: 60px;
+        }
+        #small-pic img:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="prod-pic">
+            <img src="images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" 
+                width="200" height="200">
+            <div id="small-pic">
+                <img src="images/coffee-pink.jpg" class="small">
+                <img src="images/coffee-blue.jpg" class="small">
+                <img src="images/coffee-gray.jpg" class="small">
+            </div>
+        </div>
+    </div>        
+
+    <script>
+        var cup = document.getElementById('cup');
+        var smallPics = document.querySelectorAll('.small');
+
+        for(let i = 0; i <= smallPics.length; i++) {
+            smallPics[i].addEventListener("click", changePic);
+        }
+
+        function changePic() {
+            var newPic = this.src;            
+            cup.setAttribute('src', newPic);
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!--
+변수의 적용 범위, 스코프
+- 스코프(scope) : 변수를 선언하고 사용할 때 변수가 적용되는 범위
+- 지역변수 or 로컬 변수(local variable)
+  : 한 함수에서만 사용할 수 있는 변수
+- 전역변수 or 글로벌 변수(global variable)
+  : 스크립트 소스 전체에서 사용할 수 있는 변수
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>var 변수</title>
+</head>
+<body>
+    <script>
+        function addNumber() {
+            var sum = 10 + 20;  // 지역 변수 선언
+            multi = 10 * 20;    // 전역 변수 선언
+            
+        }
+        addNumber();
+        console.log(multi);     // 전역 변수를 사용
+    </script>
+</body>
+</html>
+
+
+
+
+
+
